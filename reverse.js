@@ -22,15 +22,11 @@ console.log(joinReversed)
 }
 reverse(string) */
 
-const string="hello world"
-function reversed (string){
-    if (string.length===0) return 0
- 
-    splitString=string.split("") 
-   console.log(splitString)
-  const reverseArray = splitString.reverse()
-  console.log(reverseArray)
-joined = reverseArray.join()
-console.log(joined)
+
+function reverse(str) {
+  if (str === "")
+    return "";
+  else
+    return reverse(str.substr(1)) + str.charAt(0);
 }
-reversed(string)
+console.log(reverse("hello world"))
